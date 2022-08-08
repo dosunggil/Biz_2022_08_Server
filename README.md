@@ -8,4 +8,5 @@
 * MySQL 8.x
 * MyBatis 3.5.x
 
-## 조도성
+## 프로젝트 수행
+* dosunggil
