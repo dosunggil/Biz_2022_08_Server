@@ -15,12 +15,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>반갑습니다</h1>
-<sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal.username"/>
-	<sec:authentication property="principal.email"/>
-	<sec:authentication property="principal.realname"/>
-</sec:authorize>
+<h1>안녕하세요</h1>
+
+<h3>
+	<a href="${rootPath}/user/join">회원가입</a>
+</h3>
+<h3>
+	<a href="${rootPath}/user/login">로그인</a>
+</h3>
+<h3>
+	<a href="${rootPath}/user/mypage">마이페이지</a>
+</h3>
+<h3>
+	<a href="${rootPath}/todo/list">TODO 보기</a>
+</h3>
 
 <form:form class="logout" action="${rootPath}/logout">
 	<button>로그아웃</button>
