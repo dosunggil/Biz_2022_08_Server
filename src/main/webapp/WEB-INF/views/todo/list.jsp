@@ -19,7 +19,7 @@
 <body>
 	<h1>여기는 todo 리스트</h1>
 	<form:form>
-		<input name="todo" value="${todoone.todo}" placeholder="할일">
+		<input name="todo" value="${todoone.todo}" >
 		<button>할일 저장</button>
 		<table class="list-table">
 			<thead>
@@ -48,6 +48,7 @@
 									<c:when test="${td.done == 0 }">
 										<td class="editbox">수정하기</td>
 									</c:when>
+									
 									<c:otherwise>
 										<td>수정불가</td>
 									</c:otherwise>

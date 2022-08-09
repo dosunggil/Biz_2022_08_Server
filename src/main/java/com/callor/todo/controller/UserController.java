@@ -12,22 +12,23 @@ import com.callor.todo.service.UserService;
 public class UserController {
 	
 	private UserService userService;
-	
-	
+		
 	public UserController(UserService userService) {
 		this.userService = userService;
 		
 	}
-	@RequestMapping(value="join",method=RequestMethod.GET)
+	@RequestMapping(value="/join",method=RequestMethod.GET)
 	public String join() {
 		
 		return null;
 	}
-	@RequestMapping(value="join",method=RequestMethod.POST)
+	@RequestMapping(value="/join",method=RequestMethod.POST)
 	public String join(UserVO userVO) {
 		userService.insert(userVO);
 		return "home";
 	}
+	
+	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login() {
 		

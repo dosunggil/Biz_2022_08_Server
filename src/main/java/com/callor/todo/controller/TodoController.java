@@ -51,6 +51,9 @@ public class TodoController {
 	public String edit(@PathVariable("seq") long seq, Model model) {
 		TodoVO todoVO = todoService.findById(seq);
 		model.addAttribute("todoone",todoVO);
+		List<TodoVO> todoList = new ArrayList<TodoVO>();
+		todoList = todoService.selectAll();
+		model.addAttribute("TODOLIST",todoList);
 		
 		return "todo/list";
 	}
